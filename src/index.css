@@ -13,8 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   --loading-cube-border-color: #fafafa;
-  --loading-cube-fixed-size: 50px;
-  --loading-cube-fixed-sides-distance-divider: 1.86;
+  --loading-cube-size: 25px;
+  --loading-cube-border-size: 3px;
 }
 
 a {
