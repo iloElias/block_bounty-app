@@ -1,7 +1,7 @@
 .scene {
   width: var(--loading-cube-fixed-size);
   height: var(--loading-cube-fixed-size);
-  perspective: 600px;
+  /* perspective: 600px; */
 }
 
 .cube {
@@ -9,38 +9,43 @@
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
+
+  transform: rotateX(-25deg) rotateY(45deg);
 }
 
 .cube__face {
   position: absolute;
   width: var(--loading-cube-fixed-size);
   height: var(--loading-cube-fixed-size);
-  border: solid 2px var(--loading-cube-border-color);
-  border-radius: 2px;
+  border: solid 5px var(--loading-cube-border-color);
+  /* border-radius: 2px; */
+
+  color: transparent;
+  background-color: #242424;
 }
 
 .cube__face--front {
-  transform: rotateY(0deg) translateZ(calc(var(--loading-cube-fixed-size)/2));
+  transform: rotateY(0deg) translateZ(calc(var(--loading-cube-fixed-size)/var(--loading-cube-fixed-sides-distance-divider)));
 }
 
 .cube__face--right {
-  transform: rotateY(90deg) translateZ(calc(var(--loading-cube-fixed-size)/2));
+  transform: rotateY(90deg) translateZ(calc(var(--loading-cube-fixed-size)/var(--loading-cube-fixed-sides-distance-divider)));
 }
 
 .cube__face--back {
-  transform: rotateY(180deg) translateZ(calc(var(--loading-cube-fixed-size)/2));
+  transform: rotateY(180deg) translateZ(calc(var(--loading-cube-fixed-size)/var(--loading-cube-fixed-sides-distance-divider)));
 }
 
 .cube__face--left {
-  transform: rotateY(-90deg) translateZ(calc(var(--loading-cube-fixed-size)/2));
+  transform: rotateY(-90deg) translateZ(calc(var(--loading-cube-fixed-size)/var(--loading-cube-fixed-sides-distance-divider)));
 }
 
 .cube__face--top {
-  transform: rotateX(90deg) translateZ(calc(var(--loading-cube-fixed-size)/2));
+  transform: rotateX(90deg) translateZ(calc(var(--loading-cube-fixed-size)/var(--loading-cube-fixed-sides-distance-divider)));
 }
 
 .cube__face--bottom {
-  transform: rotateX(-90deg) translateZ(calc(var(--loading-cube-fixed-size)/2));
+  transform: rotateX(-90deg) translateZ(calc(var(--loading-cube-fixed-size)/var(--loading-cube-fixed-sides-distance-divider)));
 }
 
 .cube {
