@@ -21,3 +21,51 @@
     transform: rotateX(-25deg) rotateY(405deg);
   }
 }
+
+@keyframes inclined-cube-3-faces-pause-animation {
+  0% {
+    transform: rotateX(-90deg) rotateY(0deg);
+  }
+
+  20% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  40% {
+    transform: rotateX(0deg) rotateY(-90deg);
+  }
+
+  60% {
+    transform: rotateX(0deg) rotateY(-180deg);
+  }
+
+  80% {
+    transform: rotateX(0deg) rotateY(-270deg);
+  }
+
+  100% {
+    transform: rotateX(90deg) rotateY(-270deg);
+  }
+}
+
+@keyframes inclined-cube-3-faces-pause-animation {
+  0% {
+    transform: rotateX(-90deg) rotateY(0deg);
+  }
+
+  25% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateX(0deg) rotateY(-90deg);
+  }
+
+  75% {
+    transform: rotateX(0deg) rotateY(-180deg);
+  }
+
+  100% {
+    transform: rotateX(90deg) rotateY(-180deg);
+  }
+}

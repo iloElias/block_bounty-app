@@ -11,7 +11,7 @@
   position: relative;
   transform-style: preserve-3d;
 
-  animation: inclined-cube-3-faces-pause-animation 2s ease infinite;
+  /* animation: inclined-cube-3-faces-pause-animation 2s ease infinite; */
   transform: rotateX(-25deg) rotateY(45deg);
 }
 
@@ -76,12 +76,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-
-  background-color: green;
 }
 
-.image-above-overlay {
+.image-above {
   z-index: 5;
+
+  color: green;
+  background-color: green;
 }
 
 .cube-face .image-above {
