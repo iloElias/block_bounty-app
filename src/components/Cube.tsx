@@ -30,27 +30,39 @@ export default function Cube({
     <div className="scene">
       <div className="cube">
         <div className="cube-face cube-face-top">
+          <div className="image-above-overlay" />
           <img className="image-above" src={topAbove ?? grassTop} />
+          <div className="image-under-overlay" />
           <img className="image-under" src={topUnder ?? textureHolder} />
         </div>
         <div className="cube-face cube-face-front">
+          <div className="image-above-overlay" />
           <img className="image-above" src={sidesAbove ?? grassSides} />
+          <div className="image-under-overlay" />
           <img className="image-under" src={sidesUnder ?? textureHolder} />
         </div>
         <div className="cube-face cube-face-back">
+          <div className="image-above-overlay" />
           <img className="image-above" src={sidesAbove ?? grassSides} />
+          <div className="image-under-overlay" />
           <img className="image-under" src={sidesUnder ?? textureHolder} />
         </div>
         <div className="cube-face cube-face-right">
+          <div className="image-above-overlay" />
           <img className="image-above" src={sidesAbove ?? grassSides} />
+          <div className="image-under-overlay" />
           <img className="image-under" src={sidesUnder ?? textureHolder} />
         </div>
         <div className="cube-face cube-face-left">
+          <div className="image-above-overlay" />
           <img className="image-above" src={sidesAbove ?? grassSides} />
+          <div className="image-under-overlay" />
           <img className="image-under" src={sidesUnder ?? textureHolder} />
         </div>
         <div className="cube-face cube-face-bottom">
+          <div className="image-above-overlay" />
           <img className="image-above" src={bottomAbove} />
+          <div className="image-under-overlay" />
           <img className="image-under" src={bottomUnder ?? textureHolder} />
         </div>
       </div>

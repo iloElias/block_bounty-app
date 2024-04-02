@@ -64,8 +64,32 @@
   background-repeat: no-repeat;
 }
 
+.cube-face :is(.image-above-overlay, .image-under-overlay) {
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+  opacity: 0.5;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: green;
+}
+
+.image-above-overlay {
+  z-index: 5;
+}
+
 .cube-face .image-above {
   z-index: 4;
+}
+
+.image-under-overlay {
+  z-index: 3;
 }
 
 .cube-face .image-under {
