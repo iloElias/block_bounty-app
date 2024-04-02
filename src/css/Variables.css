@@ -1,0 +1,6 @@
+:root {
+  --loading-cube-border-color: #fafafa;
+  --loading-cube-inside-color: transparent;
+  --loading-cube-size: 25px;
+  --loading-cube-border-size: 0px;
+}

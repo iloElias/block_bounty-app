@@ -1,0 +1,73 @@
+.scene {
+  /* filter: blur(0.2px); */
+  width: var(--loading-cube-size);
+  height: var(--loading-cube-size);
+  /* perspective: 300px; */
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+
+  animation: inclined-cube-3-faces-pause-animation 2s ease infinite;
+  transform: rotateX(-25deg) rotateY(45deg);
+}
+
+.cube-face {
+  position: absolute;
+
+  aspect-ratio: 1/1;
+  width: var(--loading-cube-size);
+  height: var(--loading-cube-size);
+
+  color: transparent;
+  background-color: var(--loading-cube-inside-color);
+}
+
+.cube-face-front {
+  transform: rotateY(0deg) translateZ(calc((var(--loading-cube-size)/2) + var(--loading-cube-border-size)));
+}
+
+.cube-face-right {
+  transform: rotateY(90deg) translateZ(calc((var(--loading-cube-size)/2) + var(--loading-cube-border-size)));
+}
+
+.cube-face-back {
+  transform: rotateY(180deg) translateZ(calc((var(--loading-cube-size)/2) + var(--loading-cube-border-size)));
+}
+
+.cube-face-left {
+  transform: rotateY(-90deg) translateZ(calc((var(--loading-cube-size)/2) + var(--loading-cube-border-size)));
+}
+
+.cube-face-top {
+  transform: rotateX(90deg) translateZ(calc((var(--loading-cube-size)/2) + var(--loading-cube-border-size)));
+}
+
+.cube-face-bottom {
+  transform: rotateX(-90deg) translateZ(calc((var(--loading-cube-size)/2) + var(--loading-cube-border-size)));
+}
+
+.cube-face img {
+  position: absolute;
+
+  width: 100%;
+
+  color: transparent;
+  background-color: transparent;
+
+  object-fit: cover;
+  image-rendering: pixelated;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+}
+
+.cube-face .image-above {
+  z-index: 4;
+}
+
+.cube-face .image-under {
+  z-index: 2;
+}

@@ -11,10 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  --loading-cube-border-color: #fafafa;
-  --loading-cube-size: 25px;
-  --loading-cube-border-size: 3px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
 }
 
 a {
