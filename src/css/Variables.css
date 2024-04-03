@@ -3,4 +3,20 @@
   --loading-cube-inside-color: transparent;
   --loading-cube-size: 25px;
   --loading-cube-border-size: 0px;
+
+  --loading-cube-animation-name: inclined-cube-3-faces-pause-animation;
+  --loading-cube-animation-duration: 2s;
+  --loading-cube-animation-timing-function: ease;
+  --loading-cube-animation-iteration-count: infinite;
+
+  /* animation: <name><duration><timing-function><iteration-count>; */
+  --loading-cube-animation:
+    /* animation-name: <name>; */
+    var(--loading-cube-animation-name)
+    /* animation-duration: <number>; */
+    var(--loading-cube-animation-duration)
+    /* animation-timing-function: <easing-style>; */
+    var(--loading-cube-animation-timing-function)
+    /* animation-iteration-count: <number|infinite>; */
+    var(--loading-cube-animation-iteration-count);
 }

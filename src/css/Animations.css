@@ -10,7 +10,7 @@
   }
 
   50% {
-    transform: rotateX(-25deg) rotateY(215deg);
+    transform: rotateX(-25deg) rotateY(225deg);
   }
 
   75% {
@@ -22,7 +22,7 @@
   }
 }
 
-@keyframes inclined-cube-3-faces-pause-animation {
+@keyframes diagonal-cube-walk-animation {
   0% {
     transform: rotateX(-90deg) rotateY(0deg);
   }
@@ -48,7 +48,7 @@
   }
 }
 
-@keyframes inclined-cube-3-faces-pause-animation {
+@keyframes front-cube-1-face-show-animation {
   0% {
     transform: rotateX(-90deg) rotateY(0deg);
   }

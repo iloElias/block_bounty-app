@@ -1,0 +1,8 @@
+body :focus-within .cube {
+  animation: var(--loading-cube-animation);
+}
+
+body :not(:focus-within) .cube {
+  animation: none;
+  /* animation: var(--loading-cube-animation); */
+}
