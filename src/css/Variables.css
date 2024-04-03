@@ -1,10 +1,11 @@
 :root {
   --loading-cube-border-color: #fafafa;
   --loading-cube-inside-color: transparent;
-  --loading-cube-size: 25px;
+  --loading-cube-size: 8px;
   --loading-cube-border-size: 0px;
 
   --loading-cube-animation-name: inclined-cube-3-faces-pause-animation;
+  /* --loading-cube-animation-name: diagonal-cube-walk-animation; */
   --loading-cube-animation-duration: 2s;
   --loading-cube-animation-timing-function: ease;
   --loading-cube-animation-iteration-count: infinite;

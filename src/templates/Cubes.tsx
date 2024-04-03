@@ -26,7 +26,7 @@ import observerBack from "../assets/images/minecraft-simplified/observer_back.pn
 import observerSide from "../assets/images/minecraft-simplified/observer_side.png";
 import observerTop from "../assets/images/minecraft-simplified/observer_top.png";
 
-import Cube, { Faces } from "components/Cube";
+import Cube, { Faces } from "../components/Cube";
 
 interface CubeTemplateProps {
   texture: Faces;
@@ -298,3 +298,23 @@ const Block = {
   Observer: Observer
 }
 export default Block;
+
+export const BlockList = [
+  Dirt,
+  GrassBlock,
+  CraftingTable,
+  OakPlank,
+  Cobblestone,
+  CommandBlock,
+  Furnace,
+  Glass,
+  Glowstone,
+  CopperBlock,
+  IromBlock,
+  GoldBlock,
+  DiamondBlock,
+  NetheriteBlock,
+  Sand,
+  Noteblock,
+  Observer
+];

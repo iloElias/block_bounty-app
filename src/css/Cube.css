@@ -1,6 +1,9 @@
 .scene {
   width: var(--loading-cube-size);
   height: var(--loading-cube-size);
+
+  filter: blur(0.5%);
+  transform: scale(3);
 }
 
 .cube * {
@@ -20,6 +23,9 @@
 .cube-face {
   position: absolute;
   overflow: hidden;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 
   aspect-ratio: 1/1;
   width: var(--loading-cube-size);
@@ -127,11 +133,11 @@
   transform: rotateX(-90deg) translateZ(calc((var(--loading-cube-size)/2) + var(--loading-cube-border-size))) rotate(-90deg);
 }
 
-.cube {
+/* .cube {
   transition: 2s;
 
   transform: rotateX(45deg) rotateY(405deg);
   transform: rotateX(-45deg) rotateY(225deg);
-}
+} */
 
 /* Command block end */

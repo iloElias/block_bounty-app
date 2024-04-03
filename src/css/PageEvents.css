@@ -4,5 +4,5 @@ body :focus-within .cube {
 
 body :not(:focus-within) .cube {
   animation: none;
-  /* animation: var(--loading-cube-animation); */
+  animation: var(--loading-cube-animation);
 }
