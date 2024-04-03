@@ -3,7 +3,7 @@ import './css/Variables.css'
 import './css/Animations.css'
 import './css/Cube.css'
 import './css/PageEvents.css';
-import { Cobblestone, CommandBlock, CraftingTable, Dirt, GrassBlock, OakPlank } from './components/Cube';
+import Blocks from './templates/Cubes';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <GrassBlock />
       <Cobblestone />
       <Dirt /> */}
-      <CommandBlock />
+      <Blocks.CommandBlock />
     </div>
   )
 }

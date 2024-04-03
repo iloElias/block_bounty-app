@@ -1,31 +1,4 @@
 import dirt from "../assets/images/minecraft-simplified/dirt.png";
-import grassSides from "../assets/images/minecraft-simplified/grass_block_side_overlay.png";
-import grassTop from "../assets/images/minecraft-simplified/grass_block_top.png";
-import craftingTableTop from "../assets/images/minecraft-simplified/crafting_table_top.png";
-import craftingTableFront from "../assets/images/minecraft-simplified/crafting_table_front.png";
-import craftingTableSide from "../assets/images/minecraft-simplified/crafting_table_side.png";
-import oakPlank from "../assets/images/minecraft-simplified/oak_planks.png";
-import cobblestone from "../assets/images/minecraft-simplified/cobblestone.png";
-import commandBlockFront from "../assets/images/minecraft-simplified/command_block_front.png";
-import commandBlockBack from "../assets/images/minecraft-simplified/command_block_back.png";
-import commandBlockSide from "../assets/images/minecraft-simplified/command_block_side.png";
-import furnaceFront from "../assets/images/minecraft-simplified/furnace_front.png";
-import furnaceSide from "../assets/images/minecraft-simplified/furnace_side.png";
-import furnaceTop from "../assets/images/minecraft-simplified/furnace_top.png";
-import glass from "../assets/images/minecraft-simplified/glass.png";
-import glowstone from "../assets/images/minecraft-simplified/glowstone.png";
-import copperBlock from "../assets/images/minecraft-simplified/copper_block.png";
-import ironBlock from "../assets/images/minecraft-simplified/iron_block.png";
-import goldBlock from "../assets/images/minecraft-simplified/gold_block.png";
-import diamondBlock from "../assets/images/minecraft-simplified/diamond_block.png";
-import netheriteBlock from "../assets/images/minecraft-simplified/netherite_block.png";
-import sand from "../assets/images/minecraft-simplified/sand.png";
-import noteBlock from "../assets/images/minecraft-simplified/note_block.png";
-import observerFront from "../assets/images/minecraft-simplified/observer_front.png";
-import observerBack from "../assets/images/minecraft-simplified/observer_back.png";
-import observerSide from "../assets/images/minecraft-simplified/observer_side.png";
-import observerTop from "../assets/images/minecraft-simplified/observer_top.png";
-import observerBottom from "../assets/images/minecraft-simplified/stonecutter_bottom.png";
 
 function instanceOfFaces(object: any): object is Faces {
   if (!object) {
@@ -48,7 +21,7 @@ interface FaceLayers {
   under?: string;
 }
 
-interface Faces {
+export interface Faces {
   top?: FaceLayers | string;
   front?: FaceLayers | string;
   left?: FaceLayers | string;
@@ -65,7 +38,7 @@ interface CubeProps {
   customFilter?: string;
 }
 
-function Cube({
+export default function Cube({
   // cubeAnimation,
   texture,
   className,
@@ -201,100 +174,4 @@ export function Face({
       }
     </div>
   );
-}
-
-interface CubeTemplateProps {
-  texture: Faces;
-  colorTint?: string;
-  className?: string;
-  customFilter?: string;
-}
-
-function CubeTemplate(props: CubeTemplateProps) {
-  return (<Cube {...props} />);
-}
-
-export function Dirt() {
-  return CubeTemplate({
-    className: "dirt",
-    texture: {
-      top: { under: dirt },
-      front: { under: dirt },
-      left: { under: dirt },
-      back: { under: dirt },
-      right: { under: dirt },
-      bottom: { under: dirt }
-    }
-  });
-}
-
-export function GrassBlock() {
-  return CubeTemplate({
-    className: "grass-block",
-    texture: {
-      top: { above: grassTop, under: dirt },
-      front: { above: grassSides, under: dirt },
-      left: { above: grassSides, under: dirt },
-      back: { above: grassSides, under: dirt },
-      right: { above: grassSides, under: dirt },
-      bottom: { under: dirt }
-    },
-    colorTint: "#4CBA31"
-  });
-}
-
-export function CraftingTable() {
-  return CubeTemplate({
-    className: "crafting-table",
-    texture: {
-      top: { under: craftingTableTop },
-      front: { under: craftingTableFront },
-      left: { under: craftingTableSide },
-      back: { under: craftingTableFront },
-      right: { under: craftingTableSide },
-      bottom: { under: oakPlank }
-    }
-  });
-}
-
-export function OakPlank() {
-  return CubeTemplate({
-    className: "oak-plank",
-    texture: {
-      top: { under: oakPlank },
-      front: { under: oakPlank },
-      left: { under: oakPlank },
-      back: { under: oakPlank },
-      right: { under: oakPlank },
-      bottom: { under: oakPlank }
-    }
-  });
-}
-
-export function Cobblestone() {
-  return CubeTemplate({
-    className: "cobblestone",
-    texture: {
-      top: { under: cobblestone },
-      front: { under: cobblestone },
-      left: { under: cobblestone },
-      back: { under: cobblestone },
-      right: { under: cobblestone },
-      bottom: { under: cobblestone }
-    }
-  });
-}
-
-export function CommandBlock() {
-  return CubeTemplate({
-    className: "command-block",
-    texture: {
-      top: { under: commandBlockSide },
-      front: { under: commandBlockFront },
-      left: { under: commandBlockSide },
-      back: { under: commandBlockBack },
-      right: { under: commandBlockSide },
-      bottom: { under: commandBlockSide }
-    }
-  });
 }

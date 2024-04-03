@@ -1,5 +1,7 @@
 /* File reserved to css declared key frame animations */
 
+/* Cube animations */
+
 @keyframes inclined-cube-3-faces-pause-animation {
   0% {
     transform: rotateX(-25deg) rotateY(45deg);
