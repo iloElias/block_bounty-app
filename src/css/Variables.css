@@ -1,13 +1,12 @@
 :root {
   --loading-cube-border-color: #fafafa;
   --loading-cube-inside-color: transparent;
-  --loading-cube-size: 8px;
+  --loading-cube-size: 1.5vh;
   --loading-cube-border-size: 0px;
-  --loading-cube-face-translate-z: 3.99px;
 
   /* calc(var(--loading-cube-size)/2); */
 
-  --loading-cube-animation-name: cube-jump-animation;
+  --loading-cube-animation-name: inclined-cube-3-faces-pause-animation;
   /* --loading-cube-animation-name: diagonal-cube-walk-animation; */
   --loading-cube-animation-duration: 2s;
   --loading-cube-animation-timing-function: ease-in-out;

@@ -1,3 +1,4 @@
+import { ReactImageTint } from "react-image-tint";
 import dirt from "../assets/images/minecraft-simplified/dirt.png";
 
 function instanceOfFaces(object: any): object is Faces {
@@ -43,29 +44,28 @@ export default function Cube({
   texture,
   className,
   colorTint,
-  customFilter,
 }: CubeProps) {
   if (typeof texture === "string") {
     return (
       <div className="scene">
         <div className={`cube${className ? " " + className : ""}`}>
           <div className="cube-face cube-face-top">
-            <Face texture={texture} color={colorTint} customFilter={customFilter} />
+            <Face texture={texture} color={colorTint} />
           </div>
           <div className="cube-face cube-face-front">
-            <Face texture={texture} color={colorTint} customFilter={customFilter} />
+            <Face texture={texture} color={colorTint} />
           </div>
           <div className="cube-face cube-face-left">
-            <Face texture={texture} color={colorTint} customFilter={customFilter} />
+            <Face texture={texture} color={colorTint} />
           </div>
           <div className="cube-face cube-face-back">
-            <Face texture={texture} color={colorTint} customFilter={customFilter} />
+            <Face texture={texture} color={colorTint} />
           </div>
           <div className="cube-face cube-face-right">
-            <Face texture={texture} color={colorTint} customFilter={customFilter} />
+            <Face texture={texture} color={colorTint} />
           </div>
           <div className="cube-face cube-face-bottom">
-            <Face texture={texture} color={colorTint} customFilter={customFilter} />
+            <Face texture={texture} color={colorTint} />
           </div>
         </div>
       </div>
@@ -84,22 +84,22 @@ export default function Cube({
       <div className="scene">
         <div className={`cube${className ? " " + className : ""}`}>
           <div className="cube-face cube-face-top">
-            <Face texture={top} color={colorTint} customFilter={customFilter} />
+            <Face texture={top} color={colorTint} />
           </div>
           <div className="cube-face cube-face-front">
-            <Face texture={front} color={colorTint} customFilter={customFilter} />
+            <Face texture={front} color={colorTint} />
           </div>
           <div className="cube-face cube-face-left">
-            <Face texture={left} color={colorTint} customFilter={customFilter} />
+            <Face texture={left} color={colorTint} />
           </div>
           <div className="cube-face cube-face-back">
-            <Face texture={back} color={colorTint} customFilter={customFilter} />
+            <Face texture={back} color={colorTint} />
           </div>
           <div className="cube-face cube-face-right">
-            <Face texture={right} color={colorTint} customFilter={customFilter} />
+            <Face texture={right} color={colorTint} />
           </div>
           <div className="cube-face cube-face-bottom">
-            <Face texture={bottom} color={colorTint} customFilter={customFilter} />
+            <Face texture={bottom} color={colorTint} />
           </div>
         </div>
       </div>
@@ -109,22 +109,22 @@ export default function Cube({
       <div className="scene">
         <div className={`cube${className ? " " + className : ""}`}>
           <div className="cube-face cube-face-top">
-            <Face texture={dirt} color={colorTint} customFilter={customFilter} />
+            <Face texture={dirt} color={colorTint} />
           </div>
           <div className="cube-face cube-face-front">
-            <Face texture={dirt} color={colorTint} customFilter={customFilter} />
+            <Face texture={dirt} color={colorTint} />
           </div>
           <div className="cube-face cube-face-left">
-            <Face texture={dirt} color={colorTint} customFilter={customFilter} />
+            <Face texture={dirt} color={colorTint} />
           </div>
           <div className="cube-face cube-face-back">
-            <Face texture={dirt} color={colorTint} customFilter={customFilter} />
+            <Face texture={dirt} color={colorTint} />
           </div>
           <div className="cube-face cube-face-right">
-            <Face texture={dirt} color={colorTint} customFilter={customFilter} />
+            <Face texture={dirt} color={colorTint} />
           </div>
           <div className="cube-face cube-face-bottom">
-            <Face texture={dirt} color={colorTint} customFilter={customFilter} />
+            <Face texture={dirt} color={colorTint} />
           </div>
         </div>
       </div>
@@ -136,15 +136,13 @@ export default function Cube({
 interface FaceProps {
   texture?: FaceLayers | string;
   color?: string;
-  customFilter?: string;
 }
 
 export function Face({
   texture,
   color,
-  customFilter,
 }: FaceProps) {
-  const colorTint = { filter: `drop-shadow(calc(var(--loading-cube-size) * -1) 0 0px ${color}) ${customFilter ? customFilter : ""}` };
+  const colorTint = color ?? "white";
 
   return (
     <div className="face-wrapper">
@@ -156,12 +154,9 @@ export function Face({
         ) : (
           <>
             {texture?.above && (
-              <>
-                <div className="face-layer-above" style={colorTint}>
-                  <img className="face-overlay image-above" src={texture?.above} />
-                </div>
-                {color && (<img className="texture-image image-above" src={texture?.above} />)}
-              </>
+              <div className="face-layer-above" >
+                <ReactImageTint src={texture?.above} color={colorTint} />
+              </div>
             )}
             {texture?.middle && (<div className="face-layer-middle">
               <img className="face-overlay image-middle" src={texture?.middle} />
