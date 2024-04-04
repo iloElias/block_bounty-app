@@ -49,3 +49,35 @@
     transform: rotateX(90deg) rotateY(-270deg);
   }
 }
+
+@keyframes cube-jump-animation {
+  0% {
+    transform:
+      rotateX(-25deg) rotateY(45deg);
+  }
+
+  15% {
+    transform:
+      rotateX(-25deg) rotateY(45deg) translateY(25%) scaleX(1.2) scaleZ(1.2) scaleY(0.7);
+  }
+
+  25% {
+    transform:
+      rotateX(-25deg) rotateY(45deg) translateY(-50%) scaleX(0.8) scaleZ(0.8) scaleY(1.25);
+  }
+
+  30% {
+    transform:
+      rotateX(-25deg) rotateY(45deg) translateY(-50%) scaleX(1) scaleZ(1) scaleY(0.7);
+  }
+
+  40% {
+    transform:
+      rotateX(-25deg) rotateY(45deg) translateY(-5%) scaleX(1.1) scaleZ(1.1) scaleY(0.8);
+  }
+
+  50% {
+    transform:
+      rotateX(-25deg) rotateY(45deg);
+  }
+}

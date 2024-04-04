@@ -2,8 +2,8 @@
   width: var(--loading-cube-size);
   height: var(--loading-cube-size);
 
-  filter: blur(0.5%);
-  transform: scale(3);
+  scale: 10;
+  white-space-collapse: collapse;
 }
 
 .cube * {
@@ -30,8 +30,6 @@
   aspect-ratio: 1/1;
   width: var(--loading-cube-size);
   height: var(--loading-cube-size);
-
-  background-color: var(--loading-cube-inside-color);
 }
 
 .cube-face-front {
