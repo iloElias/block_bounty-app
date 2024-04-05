@@ -6,9 +6,6 @@ import craftingTableFront from "../assets/images/minecraft-simplified/crafting_t
 import craftingTableSide from "../assets/images/minecraft-simplified/crafting_table_side.png";
 import oakPlank from "../assets/images/minecraft-simplified/oak_planks.png";
 import cobblestone from "../assets/images/minecraft-simplified/cobblestone.png";
-import commandBlockFront from "../assets/images/minecraft-simplified/command_block_front.png";
-import commandBlockBack from "../assets/images/minecraft-simplified/command_block_back.png";
-import commandBlockSide from "../assets/images/minecraft-simplified/command_block_side.png";
 import furnaceFront from "../assets/images/minecraft-simplified/furnace_front.png";
 import furnaceSide from "../assets/images/minecraft-simplified/furnace_side.png";
 import furnaceTop from "../assets/images/minecraft-simplified/furnace_top.png";
@@ -64,7 +61,7 @@ function GrassBlock() {
       right: { above: grassSides, under: dirt },
       bottom: { under: dirt }
     },
-    colorTint: "#4CBA31"
+    colorTint: "#77ab2f"
   });
 }
 

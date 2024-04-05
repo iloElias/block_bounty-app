@@ -2,8 +2,8 @@
   width: var(--loading-cube-size);
   height: var(--loading-cube-size);
 
-  scale: 2;
-  filter: blur(0.025vh);
+  scale: 3;
+  filter: blur(0.0125vh);
 }
 
 .cube * {
