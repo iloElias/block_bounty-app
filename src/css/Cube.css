@@ -33,27 +33,27 @@
 }
 
 .cube-face-front {
-  transform: rotateY(-90deg) translateZ(calc((var(--loading-cube-size)/2.0) + var(--loading-cube-border-size)));
+  transform: rotateY(-90deg) translateZ(calc((var(--loading-cube-size)/2.05) + var(--loading-cube-border-size)));
 }
 
 .cube-face-right {
-  transform: rotateY(180deg) translateZ(calc((var(--loading-cube-size)/2.0) + var(--loading-cube-border-size)));
+  transform: rotateY(180deg) translateZ(calc((var(--loading-cube-size)/2.05) + var(--loading-cube-border-size)));
 }
 
 .cube-face-back {
-  transform: rotateY(90deg) translateZ(calc((var(--loading-cube-size)/2.0) + var(--loading-cube-border-size)));
+  transform: rotateY(90deg) translateZ(calc((var(--loading-cube-size)/2.05) + var(--loading-cube-border-size)));
 }
 
 .cube-face-left {
-  transform: rotateY(0deg) translateZ(calc((var(--loading-cube-size)/2.0) + var(--loading-cube-border-size)));
+  transform: rotateY(0deg) translateZ(calc((var(--loading-cube-size)/2.05) + var(--loading-cube-border-size)));
 }
 
 .cube-face-top {
-  transform: rotateX(90deg) translateZ(calc((var(--loading-cube-size)/2.0) + var(--loading-cube-border-size))) rotate(90deg);
+  transform: rotateX(90deg) translateZ(calc((var(--loading-cube-size)/2.05) + var(--loading-cube-border-size))) rotate(90deg);
 }
 
 .cube-face-bottom {
-  transform: rotateX(-90deg) translateZ(calc((var(--loading-cube-size)/2.0) + var(--loading-cube-border-size)));
+  transform: rotateX(-90deg) translateZ(calc((var(--loading-cube-size)/2.05) + var(--loading-cube-border-size)));
 }
 
 .cube-face img {

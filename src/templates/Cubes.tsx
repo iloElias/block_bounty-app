@@ -60,8 +60,7 @@ function GrassBlock() {
       back: { above: grassSides, under: dirt },
       right: { above: grassSides, under: dirt },
       bottom: { under: dirt }
-    },
-    colorTint: "#77ab2f"
+    }
   });
 }
 
@@ -103,20 +102,6 @@ function Cobblestone() {
       back: { under: cobblestone },
       right: { under: cobblestone },
       bottom: { under: cobblestone }
-    }
-  });
-}
-
-function CommandBlock() {
-  return CubeTemplate({
-    className: "command-block",
-    texture: {
-      top: { under: commandBlockSide },
-      front: { under: commandBlockFront },
-      left: { under: commandBlockSide },
-      back: { under: commandBlockBack },
-      right: { under: commandBlockSide },
-      bottom: { under: commandBlockSide }
     }
   });
 }
@@ -281,7 +266,6 @@ const Block = {
   CraftingTable: CraftingTable,
   OakPlank: OakPlank,
   Cobblestone: Cobblestone,
-  CommandBlock: CommandBlock,
   Furnace: Furnace,
   Glass: Glass,
   Glowstone: Glowstone,
@@ -302,7 +286,6 @@ export const BlockList = [
   CraftingTable,
   OakPlank,
   Cobblestone,
-  CommandBlock,
   Furnace,
   Glass,
   Glowstone,
@@ -315,3 +298,5 @@ export const BlockList = [
   Noteblock,
   Observer
 ];
+
+export const RandomBlock = BlockList[Math.floor(Math.random() * BlockList.length)];

@@ -1,4 +1,3 @@
-import { ReactImageTint } from "react-image-tint";
 import dirt from "../assets/images/minecraft-simplified/dirt.png";
 
 function instanceOfFaces(object: any): object is Faces {
@@ -43,29 +42,28 @@ export default function Cube({
   // cubeAnimation,
   texture,
   className,
-  colorTint,
 }: CubeProps) {
   if (typeof texture === "string") {
     return (
       <div className="scene">
         <div className={`cube${className ? " " + className : ""}`}>
           <div className="cube-face cube-face-top">
-            <Face texture={texture} color={colorTint} />
+            <Face texture={texture} />
           </div>
           <div className="cube-face cube-face-front">
-            <Face texture={texture} color={colorTint} />
+            <Face texture={texture} />
           </div>
           <div className="cube-face cube-face-left">
-            <Face texture={texture} color={colorTint} />
+            <Face texture={texture} />
           </div>
           <div className="cube-face cube-face-back">
-            <Face texture={texture} color={colorTint} />
+            <Face texture={texture} />
           </div>
           <div className="cube-face cube-face-right">
-            <Face texture={texture} color={colorTint} />
+            <Face texture={texture} />
           </div>
           <div className="cube-face cube-face-bottom">
-            <Face texture={texture} color={colorTint} />
+            <Face texture={texture} />
           </div>
         </div>
       </div>
@@ -84,22 +82,22 @@ export default function Cube({
       <div className="scene">
         <div className={`cube${className ? " " + className : ""}`}>
           <div className="cube-face cube-face-top">
-            <Face texture={top} color={colorTint} />
+            <Face texture={top} />
           </div>
           <div className="cube-face cube-face-front">
-            <Face texture={front} color={colorTint} />
+            <Face texture={front} />
           </div>
           <div className="cube-face cube-face-left">
-            <Face texture={left} color={colorTint} />
+            <Face texture={left} />
           </div>
           <div className="cube-face cube-face-back">
-            <Face texture={back} color={colorTint} />
+            <Face texture={back} />
           </div>
           <div className="cube-face cube-face-right">
-            <Face texture={right} color={colorTint} />
+            <Face texture={right} />
           </div>
           <div className="cube-face cube-face-bottom">
-            <Face texture={bottom} color={colorTint} />
+            <Face texture={bottom} />
           </div>
         </div>
       </div>
@@ -109,22 +107,22 @@ export default function Cube({
       <div className="scene">
         <div className={`cube${className ? " " + className : ""}`}>
           <div className="cube-face cube-face-top">
-            <Face texture={dirt} color={colorTint} />
+            <Face texture={dirt} />
           </div>
           <div className="cube-face cube-face-front">
-            <Face texture={dirt} color={colorTint} />
+            <Face texture={dirt} />
           </div>
           <div className="cube-face cube-face-left">
-            <Face texture={dirt} color={colorTint} />
+            <Face texture={dirt} />
           </div>
           <div className="cube-face cube-face-back">
-            <Face texture={dirt} color={colorTint} />
+            <Face texture={dirt} />
           </div>
           <div className="cube-face cube-face-right">
-            <Face texture={dirt} color={colorTint} />
+            <Face texture={dirt} />
           </div>
           <div className="cube-face cube-face-bottom">
-            <Face texture={dirt} color={colorTint} />
+            <Face texture={dirt} />
           </div>
         </div>
       </div>
@@ -140,9 +138,7 @@ interface FaceProps {
 
 export function Face({
   texture,
-  color,
 }: FaceProps) {
-  const colorTint = color ?? "white";
 
   return (
     <div className="face-wrapper">
@@ -155,7 +151,7 @@ export function Face({
           <>
             {texture?.above && (
               <div className="face-layer-above" >
-                <ReactImageTint src={texture?.above} color={colorTint} />
+                <img className="face-overlay image-above" src={texture?.above} />
               </div>
             )}
             {texture?.middle && (<div className="face-layer-middle">
